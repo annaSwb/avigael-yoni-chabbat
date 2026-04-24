@@ -588,7 +588,7 @@
             <div class="info-box">
                 <div class="info-title">Réservation de chambre</div>
 
-                <p>Pour prolonger ce moment privilégié, des chambres sont disponibles directement à l'hôtel. Nous vous invitons à contacter l'établissement et à mentionner l'événement lors de votre réservation.</p>
+                <p>Vous pouvez venir à l'hôtel réserver et payer votre chambre le vendredi 31 juillet à partir de 15h00. L'hôtel est entièrement privatisé pour notre Chabbat Hatan.</p>
 
                 <div class="price-row">
                     <span class="price-label">Chambre — jusqu'à la fin de Chabbat</span>
@@ -738,9 +738,6 @@ function submitRSVP() {
     btn.disabled = true;
     btn.textContent = 'Envoi en cours…';
 
-    // =====================================================
-    // REMPLACEZ cette URL par votre URL Google Apps Script
-    // =====================================================
     var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwuaaxbK3Naqc88xVyQoaQTGq51qziXOMGxKtIo7R4hnL7watfS6boLYFM631_zRB7Wwg/exec';
 
     var payload = {
@@ -759,7 +756,6 @@ function submitRSVP() {
         showConfirmation(name, presence);
     })
     .catch(function() {
-        // no-cors → on considère comme envoyé
         showConfirmation(name, presence);
     });
 }
